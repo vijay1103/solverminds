@@ -1,0 +1,56 @@
+<app-header></app-header>
+<div style="margin-top: 5rem;display: inline-flex;margin-bottom: 1rem;">
+    <h4>Add New Employee</h4>
+    <button style="margin-left: 4rem;" class="btn btn-success" [routerLink]="['/view']" *ngIf="!isEdit">View
+        Employee</button>
+</div>
+
+<form [formGroup]="employeeForm">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input [(ngModel)]="myTextVal" type="text" class="form-control w-100" formControlName="name"
+                        name="name" placeholder="Name">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="text" class="form-control w-100" formControlName="id" name="id"
+                        placeholder="Employee ID" [readOnly]="isEdit">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="text" class="form-control w-100" formControlName="gender" name="gender"
+                        placeholder="Gender">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="text" class="form-control w-100" formControlName="designation" name="designation"
+                        placeholder="designation">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<button (click)="add()" style="width: 12%; margin: 7px 7px 7px 7px;" class="btn btn-primary"
+    *ngIf="!isEdit">Add</button>
+<button (click)="resetForm()" style="width: 12%; margin: 7px 7px 7px 7px;" class="btn btn-danger"
+    *ngIf="!isEdit">Reset</button>
+<div class="parent">
+    <strong>Name Checking</strong>
+    <hr />
+    <input type="text" [(ngModel)]="myTextVal">
+    <button (click)="sendTextValue()">Check</button>
+
+    <hr />
+    <button (click)="toggleChildElementHandler()">Toggle View</button>
+    <br />
+    <br />
+    <app-employees-view [myInputVal]="myTextVal" (myOutputVal)="readOutputValueEmitted($event)"
+        *ngIf="toggleChildElement"></app-employees-view>
+</div>

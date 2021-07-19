@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+.navbar-light .navbar-nav .nav-link {
+    color: #002e5b ;
+}
+.align_nav{
+    padding-left: 20rem;
+    padding-right: 5rem;
+}
+.nav_head_allign{
+    width: 30%;
+}
+.nav_head{
+    width: 100%;
+}
+.active_menu {
+    cursor: pointer;
+    filter: brightness(60%) contrast(100%);
+    transition: all ease-in-out 0.3s;
+    color: #6c98e1 !important;
+    font-weight: 600;
+}

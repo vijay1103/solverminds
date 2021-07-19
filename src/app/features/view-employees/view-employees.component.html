@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div class="row" style="margin-top: 4rem;">
+    <div class="col-md-12">
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+            <ul *ngIf="employee.length>0">
+                <li *ngFor="let employe of employee" style="text-align: center;display: flex;">
+                    <a [routerLink]="['/employe',employe.id]">
+                        <div class="col-md-6">
+                            <p class="w-50">name: <span class="w-20">{{employe.name}}</span></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="w-50 text-right">Id: <span class="w-20">{{employe.id}}</span></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="w-50">Gender: <span class="w-20">{{employe.gender}}</span></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="w-50 text-right">Address: <span class="w-20">{{employe.designation}}</span></p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <h3 *ngIf="employee.length==0" class="text-center">employee Not Found</h3>
+    </div>
+</div>

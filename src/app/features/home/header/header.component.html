@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">
+        <img src="/assets/images/svmlogo.svg" style="width: 265px; height: 60px;" alt="Solverminds">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse align_nav" id="collapsibleNavbar">
+        <ul class="navbar-nav nav_head">
+            <li class="nav-item nav_head_allign">
+                <a class="nav-link" [routerLink]="['/home']" [routerLinkActive]="['active_menu']">Home</a>
+            </li>
+            <li class="nav-item nav_head_allign">
+                <a class="nav-link" [routerLink]="['/employee']" [routerLinkActive]="['active_menu']">Employee</a>
+            </li>
+        </ul>
+    </div>
+</nav>

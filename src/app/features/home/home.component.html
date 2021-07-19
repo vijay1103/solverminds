@@ -1,0 +1,22 @@
+<app-header></app-header>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">User ID</th>
+      <th scope="col">status</th>
+      <th scope="col">Due Date</th>
+      <th scope="col" class="my-icon fa fa-chevron-up" (click)="onSortClick($event)">Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td> {{ user.user_id }}</td>
+      <td> {{ user.status }}</td>
+      <td>{{ user.due_on}}</td>
+      <td>{{ user.title }}</td>
+    </tr>
+  </tbody>
+</table>

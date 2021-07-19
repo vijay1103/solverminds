@@ -10,15 +10,15 @@ import { EmployeeService } from 'src/app/core/service/employee.service';
 })
 export class ViewEmployeesComponent implements OnInit {
 
-
+ 
   employee: Employee[];
-
+  
   constructor(
     private employeeService: EmployeeService,
     private route: ActivatedRoute
-  ) { }
+  ){}
 
-  ngOnInit() {
-    this.employee = this.employeeService.getEmployees();
-  }
+    ngOnInit(){
+          this.employee = this.employeeService.getEmployees();
+    }
 }

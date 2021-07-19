@@ -6,8 +6,6 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewEmployeesComponent } from './view-employees.component';
 
-
-
 @NgModule({
   declarations: [ViewEmployeesComponent],
   imports: [

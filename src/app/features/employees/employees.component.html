@@ -1,8 +1,8 @@
 <app-header></app-header>
 <div style="margin-top: 5rem;display: inline-flex;margin-bottom: 1rem;">
     <h4>Add New Employee</h4>
-    <button style="margin-left: 4rem;" class="btn btn-success" [routerLink]="['/view']" *ngIf="!isEdit">View
-        Employee</button>
+    <button style="margin-left: 4rem;" pButton pRipple type="button" label="View Employee" [routerLink]="['/view']" *ngIf="!isEdit">
+        </button>
 </div>
 
 <form [formGroup]="employeeForm">

@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmployeesViewComponent } from './employees-view/employees-view.component';
-
+import {ButtonModule} from 'primeng/button';
 @NgModule({
   declarations: [EmployeesComponent, EmployeesViewComponent],
   imports: [
@@ -18,7 +18,8 @@ import { EmployeesViewComponent } from './employees-view/employees-view.componen
     RouterModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ButtonModule
   ]
 })
 export class EmployeeModule { }
